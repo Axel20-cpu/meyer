@@ -55,3 +55,10 @@ main {
     width: 100%;
     max-width: 1200px;
 }
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}
