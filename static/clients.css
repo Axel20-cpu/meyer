@@ -1,0 +1,85 @@
+/* Sección de Clientes */
+.clients {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Filtros */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Tabla responsiva */
+.clients-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e1e1e;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Modal */
+.modal-content {
+    background: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+
+    .clients-list table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Estilos del botón del menú */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #00ff00;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+/* Ajustes del menú lateral */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        height: 100%;
+        width: 250px;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+

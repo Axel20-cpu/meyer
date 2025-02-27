@@ -1,0 +1,96 @@
+/* Título */
+main header h1 {
+    font-size: 2rem;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de estadística */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 255, 0, 0.3);
+    width: 200px;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0;
+    color: #00ff00;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Contenedor de gráficos */
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Canvas de gráficos */
+.charts canvas {
+    width: 400px !important;  
+    height: 300px !important;
+    max-width: 100%;
+    background: #1e1e1e;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* Estilos del botón del menú */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #00ff00;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+/* Ajustes del menú lateral */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        height: 100%;
+        width: 250px;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}

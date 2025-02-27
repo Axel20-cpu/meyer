@@ -1,0 +1,79 @@
+/* Botón de escaneo */
+.scanner button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background: #1e1e1e;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.scanner button:hover {
+    background: #00ff00;
+    color: black;
+}
+
+/* Tablas responsivas */
+.tracking-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e1e1e;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .scanner button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .tracking-list table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Estilos del botón del menú */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #00ff00;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+/* Ajustes del menú lateral */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        height: 100%;
+        width: 250px;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+

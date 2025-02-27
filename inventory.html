@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Equipos - Rigging</title>
+    <link rel="stylesheet" href="static/global.css">
+    <link rel="stylesheet" href="static/inventory.css">
+</head>
+<body>
+
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="static/logo.png" alt="Empresa Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">📊 Dashboard</a></li>
+                <li><a href="inventory.html" class="active">🎛 Gestión de Equipos</a></li>
+                <li><a href="events.html">🎭 Eventos y Montajes</a></li>
+                <li><a href="clients.html">🤝 Clientes y Contratos</a></li>
+                <li><a href="tracking.html">📡 Seguimiento en Tiempo Real</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="inventory">
+        <header>
+            <h1>🎛 Gestión de Equipos</h1>
+        </header>
+
+        <!-- Filtros y búsqueda -->
+        <section class="filters">
+            <input type="text" id="search-input" placeholder="🔍 Buscar por nombre o categoría...">
+            <select id="status-filter">
+                <option value="">Todos</option>
+                <option value="Disponible">Disponible</option>
+                <option value="En Uso">En Uso</option>
+                <option value="Mantenimiento">Mantenimiento</option>
+            </select>
+            <button id="scan-button">📷 Escanear Código</button>
+            <button id="add-equipment-button">➕ Agregar Equipo</button>
+            <button id="export-button">📥 Exportar a Excel</button>
+        </section>
+
+        <!-- Tabla de Equipos -->
+        <section class="equipment-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="equipment-table-body">
+                    <tr><td colspan="5">Cargando equipos...</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Modal para agregar equipo -->
+        <section id="add-equipment-modal" class="modal">
+            <div class="modal-content">
+                <h2>Agregar Nuevo Equipo</h2>
+                <form id="add-equipment-form">
+                    <label>Nombre:</label>
+                    <input type="text" id="equipment-name" required>
+
+                    <label>Categoría:</label>
+                    <select id="equipment-category">
+                        <option value="Estructura">Estructura</option>
+                        <option value="Iluminación">Iluminación</option>
+                        <option value="Sonido">Sonido</option>
+                        <option value="Rigging">Rigging</option>
+                    </select>
+
+                    <label>Estado:</label>
+                    <select id="equipment-status">
+                        <option value="Disponible">Disponible</option>
+                        <option value="En Uso">En Uso</option>
+                        <option value="Mantenimiento">Mantenimiento</option>
+                    </select>
+
+                    <button type="submit">Agregar</button>
+                    <button type="button" id="close-modal">Cancelar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="static/inventory.js"></script>
+    <script src="static/global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+</body>
+</html>
