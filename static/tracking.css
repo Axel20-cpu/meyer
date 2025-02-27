@@ -53,3 +53,10 @@
 .tracking-list tr:hover {
     background: rgba(0, 255, 0, 0.2);
 }
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}

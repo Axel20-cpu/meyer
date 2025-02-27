@@ -51,3 +51,10 @@ main header h1 {
     border-radius: 10px;
     padding: 10px;
 }
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}

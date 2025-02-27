@@ -133,3 +133,10 @@
     transform: translate(-50%, -50%);
     position: absolute;
 }
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}

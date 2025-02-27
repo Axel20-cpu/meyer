@@ -132,3 +132,10 @@
 #close-modal:hover {
     background: #ff4d4d;
 }
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}
