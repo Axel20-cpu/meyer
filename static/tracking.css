@@ -1,0 +1,55 @@
+/* Sección de Seguimiento */
+.tracking {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Botón de escaneo */
+.scanner button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background: #1e1e1e;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: auto;
+}
+
+.scanner button:hover {
+    background: #00ff00;
+    color: black;
+}
+
+/* Tabla de Movimientos */
+.tracking-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e1e1e;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tracking-list th,
+.tracking-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #00ff00;
+}
+
+.tracking-list th {
+    background: #00ff00;
+    color: black;
+}
+
+.tracking-list tr:nth-child(even) {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.tracking-list tr:hover {
+    background: rgba(0, 255, 0, 0.2);
+}

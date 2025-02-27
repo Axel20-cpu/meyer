@@ -1,0 +1,165 @@
+/* Sección de Inventario */
+.inventory {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Filtros y búsqueda */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select,
+.filters button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background: #1e1e1e;
+    color: white;
+}
+
+.filters button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button:hover {
+    background: #00ff00;
+    color: black;
+}
+
+/* Tabla de Equipos */
+.equipment-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e1e1e;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.equipment-list th,
+.equipment-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #00ff00;
+}
+
+.equipment-list th {
+    background: #00ff00;
+    color: black;
+}
+
+.equipment-list tr:nth-child(even) {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.equipment-list tr:hover {
+    background: rgba(0, 255, 0, 0.2);
+}
+
+/* Modal para agregar equipo */
+/* Contenedor del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Título del modal */
+.modal-content h2 {
+    text-align: center;
+    color: #00ff00;
+}
+
+/* Etiquetas */
+.modal-content label {
+    font-weight: bold;
+    color: #00ff00;
+}
+
+/* Campos de entrada */
+.modal-content input,
+.modal-content select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background: #1e1e1e;
+    color: white;
+    width: 100%;
+}
+
+/* Botones */
+.modal-content button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Botón de agregar */
+.modal-content button[type="submit"] {
+    background: #00ff00;
+    border: 1px solid #00ff00;
+    color: black;
+}
+
+.modal-content button[type="submit"]:hover {
+    background: #33ff33;
+}
+
+/* Botón de cancelar */
+#close-modal {
+    background: #ff0000;
+    border: 1px solid #ff0000;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Asegurar que el modal siempre esté centrado */
+.modal-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+#close-modal:hover {
+    background: #ff4d4d;
+}
+
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}

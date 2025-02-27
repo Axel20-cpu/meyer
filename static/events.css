@@ -1,0 +1,134 @@
+/* Sección de Eventos */
+.events {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Filtros y búsqueda */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select,
+.filters button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background: #1e1e1e;
+    color: white;
+}
+
+.filters button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters button:hover {
+    background: #00ff00;
+    color: black;
+}
+
+/* Tabla de Eventos */
+.events-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e1e1e;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.events-list th,
+.events-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #00ff00;
+}
+
+.events-list th {
+    background: #00ff00;
+    color: black;
+}
+
+.events-list tr:nth-child(even) {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.events-list tr:hover {
+    background: rgba(0, 255, 0, 0.2);
+}
+
+/* Modal para agregar evento */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #1b1b1b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+}
+
+/* Contenido del modal */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Título del modal */
+.modal-content h2 {
+    color: #00ff00;
+    text-align: center;
+}
+
+/* Campos del formulario */
+.modal-content label {
+    font-weight: bold;
+    color: #00ff00;
+    margin-top: 10px;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    background: #1e1e1e;
+    color: white;
+    width: 100%;
+}
+
+/* Botones */
+.modal-content button {
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.modal-content button:hover {
+    background: #00ff00;
+    color: black;
+}
+
+/* Botón de cerrar */
+#close-modal {
+    background: #ff0000;
+    border: 1px solid #ff0000;
+    margin-top: 10px;
+}
+
+#close-modal:hover {
+    background: #ff4d4d;
+}
